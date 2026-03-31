@@ -45,7 +45,7 @@ const proyectosData = [
     id: 2,
     titulo: 'Portafolio personal',
     descripcion: 'Un portafolio interactivo personal y navegación intuitiva.',
-    enlace: 'https://github.com/eduviera1407/portafolio-3d',
+    enlace: 'https://github.com/eduviera1407/eduardo-viera-portfolio.git',
     imagen: '/portafolios.png',
   },
   {
