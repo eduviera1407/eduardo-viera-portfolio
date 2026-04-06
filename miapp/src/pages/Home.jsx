@@ -1,25 +1,14 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaJava, FaPython, FaReact, FaAws } from 'react-icons/fa';
+import {FaAws, FaGithub, FaJava, FaLinkedin, FaPython, FaReact} from 'react-icons/fa';
 import StorageIcon from '@mui/icons-material/Storage';
 import MemoryIcon from '@mui/icons-material/Memory';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 
-import {
-    AppBar,
-    Box,
-    Button,
-    Card,
-    CardContent,
-    Chip,
-    Container,
-    CssBaseline,
-    Stack,
-    Typography,
-} from '@mui/material';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import {AppBar, Box, Button, Card, CardContent, Chip, Container, CssBaseline, Stack, Typography,} from '@mui/material';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 import MenuDrawer from '../components/MenuDrawer';
 import '../styles/App.css';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const theme = createTheme({
     palette: {
@@ -41,13 +30,13 @@ const theme = createTheme({
 });
 
 const skills = [
-    { label: 'Java', icon: <FaJava /> },
-    { label: 'Python', icon: <FaPython /> },
-    { label: 'React', icon: <FaReact /> },
-    { label: 'SQL', icon: <StorageIcon sx={{ fontSize: 18 }} /> },
-    { label: 'SAP Commerce', icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
-    { label: 'IA / Big Data', icon: <MemoryIcon sx={{ fontSize: 18 }} /> },
-    { label: 'AWS', icon: <FaAws /> },
+    {label: 'Java', icon: <FaJava/>},
+    {label: 'Python', icon: <FaPython/>},
+    {label: 'React', icon: <FaReact/>},
+    {label: 'SQL', icon: <StorageIcon sx={{fontSize: 18}}/>},
+    {label: 'SAP Commerce', icon: <BusinessCenterIcon sx={{fontSize: 18}}/>},
+    {label: 'IA / Big Data', icon: <MemoryIcon sx={{fontSize: 18}}/>},
+    {label: 'AWS', icon: <FaAws/>},
 ];
 
 const highlights = [
@@ -71,7 +60,7 @@ const highlights = [
 const Home = () => {
     return (
         <ThemeProvider theme={theme}>
-            <CssBaseline />
+            <CssBaseline/>
 
             <Box
                 sx={{
@@ -89,17 +78,17 @@ const Home = () => {
                         borderBottom: '1px solid rgba(255,255,255,0.08)',
                     }}
                 >
-                    <MenuDrawer />
+                    <MenuDrawer/>
                 </AppBar>
 
-                <Container maxWidth="lg" sx={{ py: { xs: 5, md: 8 } }}>
+                <Container maxWidth="lg" sx={{py: {xs: 5, md: 8}}}>
                     <Box
                         sx={{
                             display: 'grid',
-                            gridTemplateColumns: { xs: '1fr', md: '1.2fr 0.8fr' },
-                            gap: { xs: 4, md: 6 },
+                            gridTemplateColumns: {xs: '1fr', md: '1.2fr 0.8fr'},
+                            gap: {xs: 4, md: 6},
                             alignItems: 'center',
-                            p: { xs: 3, md: 6 },
+                            p: {xs: 3, md: 6},
                             borderRadius: 4,
                             background:
                                 'linear-gradient(135deg, rgba(36, 5, 76, 0.96), rgba(31, 35, 118, 0.88))',
@@ -123,7 +112,7 @@ const Home = () => {
                                     fontWeight: 700,
                                     mt: 1,
                                     mb: 2,
-                                    fontSize: { xs: '2.2rem', md: '3.4rem' },
+                                    fontSize: {xs: '2.2rem', md: '3.4rem'},
                                     lineHeight: 1.1,
                                 }}
                             >
@@ -136,7 +125,7 @@ const Home = () => {
                                     color: '#e7d7a8',
                                     fontWeight: 500,
                                     mb: 2,
-                                    fontSize: { xs: '1.2rem', md: '1.6rem' },
+                                    fontSize: {xs: '1.2rem', md: '1.6rem'},
                                 }}
                             >
                                 Desarrollador Full-Stack con experiencia en Java, React,
@@ -152,15 +141,15 @@ const Home = () => {
                                     lineHeight: 1.8,
                                 }}
                             >
-                                Construyo aplicaciones web y soluciones orientadas a e-commerce,
+                                Construyo aplicaciones y soluciones orientadas a e-commerce,
                                 backend y datos. Actualmente sigo reforzando mi perfil en
                                 inteligencia artificial y Big Data.
                             </Typography>
 
                             <Stack
-                                direction={{ xs: 'column', sm: 'row' }}
+                                direction={{xs: 'column', sm: 'row'}}
                                 spacing={2}
-                                sx={{ mt: 4 }}
+                                sx={{mt: 4}}
                             >
                                 <Button
                                     variant="contained"
@@ -203,16 +192,16 @@ const Home = () => {
                                 spacing={1.2}
                                 useFlexGap
                                 flexWrap="wrap"
-                                sx={{ mt: 4 }}
+                                sx={{mt: 4}}
                             >
                                 <Stack
                                     direction="row"
                                     spacing={1.2}
                                     useFlexGap
                                     flexWrap="wrap"
-                                    sx={{ mt: 4 }}
+                                    sx={{mt: 4}}
                                 >
-                                    {skills.map(({ label, icon }) => (
+                                    {skills.map(({label, icon}) => (
                                         <Chip
                                             key={label}
                                             icon={icon}
@@ -233,9 +222,9 @@ const Home = () => {
                             </Stack>
 
                             <Stack
-                                direction={{ xs: 'column', sm: 'row' }}
+                                direction={{xs: 'column', sm: 'row'}}
                                 spacing={2}
-                                sx={{ mt: 4 }}
+                                sx={{mt: 4}}
                             >
                                 <Button
                                     variant="text"
@@ -243,7 +232,7 @@ const Home = () => {
                                     href="https://github.com/eduviera1407"
                                     target="_blank"
                                     rel="noreferrer"
-                                    startIcon={<FaGithub />}
+                                    startIcon={<FaGithub/>}
                                     sx={{
                                         color: '#fff',
                                         textTransform: 'none',
@@ -260,7 +249,7 @@ const Home = () => {
                                     href="https://www.linkedin.com/in/eduardo-roque-viera-santana-a66361316"
                                     target="_blank"
                                     rel="noreferrer"
-                                    startIcon={<FaLinkedin />}
+                                    startIcon={<FaLinkedin/>}
                                     sx={{
                                         color: '#fff',
                                         textTransform: 'none',
@@ -285,8 +274,8 @@ const Home = () => {
                                 src="/eduardoviera.jpg"
                                 alt="Foto de Eduardo Viera"
                                 sx={{
-                                    width: { xs: 220, md: 300 },
-                                    height: { xs: 220, md: 300 },
+                                    width: {xs: 220, md: 300},
+                                    height: {xs: 220, md: 300},
                                     objectFit: 'cover',
                                     borderRadius: '50%',
                                     border: '6px solid rgba(255,255,255,0.1)',
@@ -296,13 +285,13 @@ const Home = () => {
                         </Box>
                     </Box>
 
-                    <Box sx={{ mt: 6 }}>
+                    <Box sx={{mt: 6}}>
                         <Typography
                             variant="h4"
                             sx={{
                                 mb: 3,
                                 fontWeight: 700,
-                                textAlign: { xs: 'center', md: 'left' },
+                                textAlign: {xs: 'center', md: 'left'},
                             }}
                         >
                             Lo que aporto
@@ -311,7 +300,7 @@ const Home = () => {
                         <Box
                             sx={{
                                 display: 'grid',
-                                gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
+                                gridTemplateColumns: {xs: '1fr', md: 'repeat(3, 1fr)'},
                                 gap: 3,
                             }}
                         >
@@ -325,8 +314,8 @@ const Home = () => {
                                         border: '1px solid rgba(255,255,255,0.08)',
                                     }}
                                 >
-                                    <CardContent sx={{ p: 3 }}>
-                                        <Typography variant="h6" sx={{ mb: 1.5, fontWeight: 700 }}>
+                                    <CardContent sx={{p: 3}}>
+                                        <Typography variant="h6" sx={{mb: 1.5, fontWeight: 700}}>
                                             {item.title}
                                         </Typography>
                                         <Typography

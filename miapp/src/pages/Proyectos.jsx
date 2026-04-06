@@ -179,18 +179,7 @@ const Proyectos = () => {
           <MenuDrawer />
         </AppBar>
 
-        <Container maxWidth="lg" sx={{ mt: 4, mb: 6 }}>
-          <Typography
-              variant="h4"
-              sx={{
-                textAlign: 'center',
-                mb: 4,
-                color: 'primary.main',
-                fontWeight: 700,
-              }}
-          >
-            Mis Proyectos
-          </Typography>
+        <Container maxWidth="lg" sx={{ mt: 15, mb: 10 }}>
 
           <DragDropContext onDragEnd={handleDragEnd}>
             <Droppable droppableId="droppable" direction="horizontal">
