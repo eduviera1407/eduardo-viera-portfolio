@@ -271,11 +271,11 @@ const Home = () => {
                         >
                             <Box
                                 component="img"
-                                src="/eduardoviera.jpg"
+                                src={`${import.meta.env.BASE_URL}eduardoviera.jpg`}
                                 alt="Foto de Eduardo Viera"
                                 sx={{
-                                    width: {xs: 220, md: 300},
-                                    height: {xs: 220, md: 300},
+                                    width: { xs: 220, md: 300 },
+                                    height: { xs: 220, md: 300 },
                                     objectFit: 'cover',
                                     borderRadius: '50%',
                                     border: '6px solid rgba(255,255,255,0.1)',
