@@ -46,7 +46,7 @@ const proyectosData = [
     titulo: 'Portafolio personal',
     descripcion: 'Un portafolio interactivo personal y navegación intuitiva.',
     enlace: 'https://github.com/eduviera1407/eduardo-viera-portfolio.git',
-    imagen: 'public/portafolios.png',
+    imagen: {`${import.meta.env.BASE_URL}/portafolios.png`},
   },
   {
     id: 3,
@@ -60,7 +60,7 @@ const proyectosData = [
     titulo: 'OFF-STOP',
     descripcion: 'Una aplicación desarrollada en Java con la función de apagar o parar el PC (Windows).',
     enlace: 'https://github.com/eduviera1407/OffStop.git',
-    video: 'public/OFFSTOP.mp4',
+    video: {`${import.meta.env.BASE_URL}OFFSTOP.mp4`},
   },
   {
     id: 5,
@@ -68,7 +68,7 @@ const proyectosData = [
     descripcion:
         'El objetivo es trabajar con un conjunto de datos real del Gobierno de Canarias relacionado con los egresados de Formación Profesional, almacenarlo en Amazon S3 y procesarlo posteriormente con EMR.',
     enlace: 'https://github.com/eduviera1407/Actividad-01-aws-emr-egresados-fp-canarias.git',
-    imagen: 'public/Egresados_FP_Canarias.png',
+    imagen: {`${import.meta.env.BASE_URL}/Egresados_FP_Canarias.png`},
   },
   {
     id: 6,
@@ -76,7 +76,7 @@ const proyectosData = [
     descripcion:
         'Este proyecto documenta el proceso completo de creación de un brazo robótico, abarcando desde la generación de primitivas hasta la implementación de scripts de control.',
     enlace: 'https://github.com/eduviera1407/BrazoRobotico.git',
-    video: 'public/coppeliasim.mp4',
+    video: {`${import.meta.env.BASE_URL}/coppeliasim.mp4`},
   },
   {
     id: 7,
@@ -84,7 +84,8 @@ const proyectosData = [
     descripcion:
         'El objetivo es crear una herramienta que facilite la gestión de productos retro, haciendo uso de una interfaz gráfica para la comunicación con el usuario, conexión a una base de datos MySQL y manipulación de archivos de texto para ejecutar sentencias SQL.',
     enlace: 'https://github.com/eduviera1407/gestion-productos-retro.git',
-    video: 'public/Funcionamiento ProductosRetro.mp4',
+    video: {`${import.meta.env.BASE_URL}/Funcionamiento ProductosRetro.mp4`},
+
   },
   {
     id: 8,
@@ -92,7 +93,7 @@ const proyectosData = [
     descripcion:
         'Repositorio con actividades, ejercicios y notebooks realizados durante la asignatura o bloque de introducción a Python.',
     enlace: 'https://github.com/eduviera1407/Introduccion-a-Python.git',
-    video: 'public/introduccion-python.mp4',
+    video: {`${import.meta.env.BASE_URL}/introduccion-python.mp`},
   },
 ];
 
