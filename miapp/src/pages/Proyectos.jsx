@@ -13,6 +13,7 @@ import {
 import MenuDrawer from '../components/MenuDrawer';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+const base = import.meta.env.BASE_URL;
 
 const theme = createTheme({
   palette: {
@@ -46,12 +47,13 @@ const proyectosData = [
     titulo: 'Portafolio personal',
     descripcion: 'Un portafolio interactivo personal y navegación intuitiva.',
     enlace: 'https://github.com/eduviera1407/eduardo-viera-portfolio.git',
-    imagen: 'public/portafolios.png',
+    imagen: `${base}portafolios.png`,
   },
   {
     id: 3,
     titulo: 'App CRUD con Jetpack Compose',
-    descripcion: 'App RetroCam es una aplicación nativa de Android desarrollada en Kotlin con Jetpack Compose que sirve como proyecto integrador para demostrar distintas tecnologías modernas.',
+    descripcion:
+        'App RetroCam es una aplicación nativa de Android desarrollada en Kotlin con Jetpack Compose que sirve como proyecto integrador para demostrar distintas tecnologías modernas.',
     enlace: 'https://github.com/eduviera1407/app-crud-compose-android.git',
     videoEmbed: 'https://drive.google.com/file/d/1mpYjxritADfnA7tZsRMwG7UN1VohOWmo/preview',
   },
@@ -60,7 +62,7 @@ const proyectosData = [
     titulo: 'OFF-STOP',
     descripcion: 'Una aplicación desarrollada en Java con la función de apagar o parar el PC (Windows).',
     enlace: 'https://github.com/eduviera1407/OffStop.git',
-    video: 'public/OFFSTOP.mp4',
+    video: `${base}OFFSTOP.mp4`,
   },
   {
     id: 5,
@@ -68,7 +70,7 @@ const proyectosData = [
     descripcion:
         'El objetivo es trabajar con un conjunto de datos real del Gobierno de Canarias relacionado con los egresados de Formación Profesional, almacenarlo en Amazon S3 y procesarlo posteriormente con EMR.',
     enlace: 'https://github.com/eduviera1407/Actividad-01-aws-emr-egresados-fp-canarias.git',
-    imagen: 'public/Egresados_FP_Canarias.png',
+    imagen: `${base}Egresados_FP_Canarias.png`,
   },
   {
     id: 6,
@@ -76,7 +78,7 @@ const proyectosData = [
     descripcion:
         'Este proyecto documenta el proceso completo de creación de un brazo robótico, abarcando desde la generación de primitivas hasta la implementación de scripts de control.',
     enlace: 'https://github.com/eduviera1407/BrazoRobotico.git',
-    video: 'public/coppeliasim.mp4',
+    video: `${base}coppeliasim.mp4`,
   },
   {
     id: 7,
@@ -84,7 +86,7 @@ const proyectosData = [
     descripcion:
         'El objetivo es crear una herramienta que facilite la gestión de productos retro, haciendo uso de una interfaz gráfica para la comunicación con el usuario, conexión a una base de datos MySQL y manipulación de archivos de texto para ejecutar sentencias SQL.',
     enlace: 'https://github.com/eduviera1407/gestion-productos-retro.git',
-    video: 'public/Funcionamiento ProductosRetro.mp4',
+    video: `${base}Funcionamiento ProductosRetro.mp4`,
   },
   {
     id: 8,
@@ -92,7 +94,15 @@ const proyectosData = [
     descripcion:
         'Repositorio con actividades, ejercicios y notebooks realizados durante la asignatura o bloque de introducción a Python.',
     enlace: 'https://github.com/eduviera1407/Introduccion-a-Python.git',
-    video: 'public/introduccion-python.mp4',
+    video: `${base}introduccion-python.mp4`,
+  },
+      {
+    id: 9,
+    titulo: 'Pipeline de datos en tiempo real con Airflow, Kafka y Spark',
+    descripcion:
+        'Proyecto de procesamiento de datos en tiempo real usando Apache Airflow, Kafka y Spark sobre WSL. El sistema obtiene datos meteorológicos desde OpenWeatherMap, los publica en Kafka y los procesa mediante Spark Structured Streaming.',
+    enlace: 'https://github.com/eduviera1407/Introduccion-a-Python.git',
+    video: `${base}Pipeline_datos_en_tiempo_real_con_Airflow_Kafka_Spark.png`,
   },
 ];
 
