@@ -95,6 +95,7 @@ const proyectosData = [
         'Repositorio con actividades, ejercicios y notebooks realizados durante la asignatura o bloque de introducción a Python.',
     enlace: 'https://github.com/eduviera1407/Introduccion-a-Python.git',
     video: `${base}introduccion-python.mp4`,
+<<<<<<< HEAD
   },
       {
     id: 9,
@@ -103,6 +104,8 @@ const proyectosData = [
         'Proyecto de procesamiento de datos en tiempo real usando Apache Airflow, Kafka y Spark sobre WSL. El sistema obtiene datos meteorológicos desde OpenWeatherMap, los publica en Kafka y los procesa mediante Spark Structured Streaming.',
     enlace: 'https://github.com/eduviera1407/Introduccion-a-Python.git',
     video: `${base}Pipeline_datos_en_tiempo_real_con_Airflow_Kafka_Spark.png`,
+=======
+>>>>>>> 1232cf689511b69c6d9c5653872b46384edfd833
   },
 ];
 
