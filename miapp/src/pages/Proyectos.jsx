@@ -101,8 +101,8 @@ const proyectosData = [
     titulo: 'Pipeline de datos en tiempo real con Airflow, Kafka y Spark',
     descripcion:
         'Proyecto de procesamiento de datos en tiempo real usando Apache Airflow, Kafka y Spark sobre WSL. El sistema obtiene datos meteorológicos desde OpenWeatherMap, los publica en Kafka y los procesa mediante Spark Structured Streaming.',
-    enlace: 'https://github.com/eduviera1407/Introduccion-a-Python.git',
-    video: `${base}Pipeline_datos_en_tiempo_real_con_Airflow_Kafka_Spark.png`,
+    enlace: 'https://github.com/eduviera1407/pipeline-datos-tiempo-real-airflow-kafka-spark.git',
+    imagen: `${base}Pipeline_datos_en_tiempo_real_con_Airflow_Kafka_Spark.png`,
   },
 ];
 
