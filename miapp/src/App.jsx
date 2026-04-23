@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import Proyectos from './pages/Proyectos';
@@ -7,7 +7,7 @@ import './styles/App.css';
 
 const App = () => {
     return (
-        <Router basename="/eduardo-viera-portfolio">
+        <Router>
             <Routes>
                 <Route path="/" element={<Navigate to="/home" replace />} />
                 <Route path="/home" element={<Home />} />
