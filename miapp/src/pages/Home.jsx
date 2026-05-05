@@ -9,6 +9,7 @@ import {createTheme, ThemeProvider} from '@mui/material/styles';
 import MenuDrawer from '../components/MenuDrawer';
 import '../styles/App.css';
 import {Link} from 'react-router-dom';
+const base = import.meta.env.BASE_URL;
 
 const theme = createTheme({
     palette: {
@@ -167,20 +168,20 @@ const Home = () => {
                                     Ver proyectos
                                 </Button>
 
-                                <Button
+                                    <Button
                                     variant="outlined"
                                     size="large"
                                     onClick={() =>
-                                        window.open('/CV Eduardo Roque Viera Santana.pdf', '_blank')
+                                    window.open(`${base}cv-eduardo-roque-viera-santana.pdf`, '_blank')
                                     }
                                     sx={{
-                                        px: 4,
-                                        py: 1.4,
-                                        borderRadius: 3,
-                                        textTransform: 'none',
-                                        fontSize: '1rem',
-                                        borderColor: 'rgba(255,255,255,0.3)',
-                                        color: '#fff',
+                                    px: 4,
+                                    py: 1.4,
+                                    borderRadius: 3,
+                                    textTransform: 'none',
+                                    fontSize: '1rem',
+                                    borderColor: 'rgba(255,255,255,0.3)',
+                                    color: '#fff',
                                     }}
                                 >
                                     Descargar CV

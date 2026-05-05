@@ -104,6 +104,14 @@ const proyectosData = [
     enlace: 'https://github.com/eduviera1407/pipeline-datos-tiempo-real-airflow-kafka-spark.git',
     imagen: `${base}Pipeline_datos_en_tiempo_real_con_Airflow_Kafka_Spark.png`,
   },
+        {
+    id: 10,
+    titulo: 'Proyecto Spark, Prometheus, Grafana, Alertmanager y Ganglia',
+    descripcion:
+        'Proyecto de despliegue y monitorización de un clúster Spark con Docker, Prometheus, Grafana, Alertmanager y Ganglia.',
+    enlace: 'https://github.com/eduviera1407/proyecto-spark-prometheus-grafana-ganglia',
+    imagen: `${base}proyecto-spark-prometheus-grafana-ganglia.png`,
+  },
 ];
 
 const Proyectos = () => {
@@ -121,67 +129,96 @@ const Proyectos = () => {
     setProyectos(reorderedProyectos);
   };
 
-  const renderMedia = (proyecto) => {
-    if (proyecto.videoEmbed) {
-      return (
-          <Box sx={{ width: '100%', height: 300 }}>
-            <iframe
-                src={proyecto.videoEmbed}
-                width="100%"
-                height="100%"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-                style={{ border: 'none' }}
-                title={proyecto.titulo}
-            />
-          </Box>
-      );
-    }
-
-    if (proyecto.video) {
-      return (
-          <CardMedia
-              component="video"
-              src={proyecto.video}
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls
-              preload="metadata"
-              width="100%"
-              height="300"
-              sx={{
-                objectFit: 'contain',
-                cursor: 'pointer',
-                backgroundColor: '#000',
-              }}
-              onClick={(e) => {
-                const video = e.currentTarget;
-                if (video.requestFullscreen) {
-                  video.requestFullscreen();
-                } else if (video.webkitRequestFullscreen) {
-                  video.webkitRequestFullscreen();
-                } else if (video.msRequestFullscreen) {
-                  video.msRequestFullscreen();
-                }
-              }}
-          />
-      );
-    }
-
-    return (
-        <CardMedia
-            component="img"
-            alt={proyecto.titulo}
-            height="300"
-            image={proyecto.imagen}
-            sx={{
-              objectFit: 'cover',
-            }}
-        />
-    );
+const renderMedia = (proyecto) => {
+  const mediaWrapperSx = {
+    width: '100%',
+    aspectRatio: '16 / 9',
+    backgroundColor: '#000',
+    overflow: 'hidden',
   };
+
+  const mediaSx = {
+    width: '100%',
+    height: '100%',
+    display: 'block',
+  };
+
+  if (proyecto.videoEmbed) {
+    return (
+      <Box sx={mediaWrapperSx}>
+        <Box
+          component="iframe"
+          src={proyecto.videoEmbed}
+          title={proyecto.titulo}
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          sx={{
+            ...mediaSx,
+            border: 'none',
+          }}
+        />
+      </Box>
+    );
+  }
+
+  if (proyecto.video) {
+    return (
+      <Box sx={mediaWrapperSx}>
+        <Box
+          component="video"
+          src={proyecto.video}
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls
+          preload="metadata"
+          sx={{
+            ...mediaSx,
+            objectFit: 'cover',
+            cursor: 'pointer',
+          }}
+          onClick={(e) => {
+            const video = e.currentTarget;
+            if (video.requestFullscreen) {
+              video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) {
+              video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+              video.msRequestFullscreen();
+            }
+          }}
+        />
+      </Box>
+    );
+  }
+
+return (
+  <Box
+    sx={{
+      width: '100%',
+      aspectRatio: '16 / 9',
+      backgroundColor: '#111',
+      overflow: 'hidden',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}
+  >
+    <Box
+      component="img"
+      src={proyecto.imagen}
+      alt={proyecto.titulo}
+      sx={{
+        width: '100%',
+        height: '100%',
+        objectFit: 'contain',
+        display: 'block',
+      }}
+    />
+  </Box>
+);
+};
 
   return (
       <ThemeProvider theme={theme}>
@@ -212,17 +249,21 @@ const Proyectos = () => {
                                   {...provided.draggableProps}
                                   {...provided.dragHandleProps}
                                   sx={{
-                                    width: 450,
-                                    background: 'linear-gradient(45deg, #4b0082, #3a006b, #2563eb)',
-                                    backgroundSize: '300% 300%',
-                                    color: 'white',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    boxShadow: 3,
-                                    borderRadius: 2,
-                                    borderBottom: `3px solid ${theme.palette.primary.main}`,
-                                    overflow: 'hidden',
-                                  }}
+                                      width: {
+                                        xs: '100%',
+                                        sm: 450,
+                                      },
+                                      maxWidth: '100%',
+                                      background: 'linear-gradient(45deg, #4b0082, #3a006b, #2563eb)',
+                                      backgroundSize: '300% 300%',
+                                      color: 'white',
+                                      display: 'flex',
+                                      flexDirection: 'column',
+                                      boxShadow: 3,
+                                      borderRadius: 2,
+                                      borderBottom: `3px solid ${theme.palette.primary.main}`,
+                                      overflow: 'hidden',
+                                    }}
                               >
                                 {renderMedia(proyecto)}
 
